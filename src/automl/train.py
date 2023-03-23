@@ -38,7 +38,8 @@ def compare_to_baseline(
     test_df = data_module.test_df
 
     baseline_preds = baseline_model.predict(test_df.drop("target"))
-    model_preds = model(torch.FloatTensor(test_df.drop(columns="target").to_list()))
+    with torch.no_grad():
+        model_preds = model(torch.FloatTensor(test_df.drop(columns="target").to_list()))
 
     return (
         compute_test_metrics(model_preds, test_df["target"]),
