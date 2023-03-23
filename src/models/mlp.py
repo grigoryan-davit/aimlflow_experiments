@@ -24,6 +24,7 @@ class MLP(pl.LightningModule):
             (num_classes is None, task == "classification")
         ), "If the task is classification, num_classes should be provided"
 
+        self.task = task
         self.lr = lr
 
         layers = []

@@ -1,4 +1,4 @@
-from argparse import ArgumentParser
+import sys
 from typing import Any, Dict, Tuple
 
 import lightning.pytorch as pl
@@ -17,7 +17,14 @@ from src.data.bc_dataset import BCDataModule
 from src.models.mlp import MLP
 
 
-def train_baseline(data_module: BCDataModule) -> SGDClassifier:
+def train_baseline_regression(data_module: BCDataModule) -> SGDClassifier:
+    baseline = make_pipeline(StandardScaler(), SGDClassifier(max_iter=1000, tol=1e-3))
+    baseline.fit(
+        data_module.train_df.drop(columns="target"), data_module.train_df["target"]
+    )
+    return baseline
+
+def train_baseline_classification(data_module: BCDataModule) -> SGDClassifier:
     baseline = make_pipeline(StandardScaler(), SGDClassifier(max_iter=1000, tol=1e-3))
     baseline.fit(
         data_module.train_df.drop(columns="target"), data_module.train_df["target"]
@@ -25,7 +32,13 @@ def train_baseline(data_module: BCDataModule) -> SGDClassifier:
     return baseline
 
 
-def compute_test_metrics(y_true, y_pred):
+def compute_test_metrics_regression(y_true, y_pred):
+    return {
+        "mse": mean_squared_error(y_true, y_pred),
+        "mae": mean_absolute_error(y_true, y_pred),
+    }
+
+def compute_test_metrics_classification(y_true, y_pred):
     return {
         "mse": mean_squared_error(y_true, y_pred),
         "mae": mean_absolute_error(y_true, y_pred),
@@ -42,10 +55,16 @@ def compare_to_baseline(
         model.eval()
         model_preds = model(torch.FloatTensor(test_df.drop(columns="target").to_list()))
 
-    return (
-        compute_test_metrics(model_preds, test_df["target"]),
-        compute_test_metrics(baseline_preds, test_df["target"]),
-    )
+    if model.task == "regression":
+        return (
+            compute_test_metrics_regression(model_preds, test_df["target"]),
+            compute_test_metrics_regression(baseline_preds, test_df["target"]),
+        )
+    else:
+        return (
+            compute_test_metrics_classification(model_preds, test_df["target"]),
+            compute_test_metrics_classification(baseline_preds, test_df["target"]),
+        )
 
 
 def train_pl(
@@ -65,18 +84,19 @@ if __name__ == "__main__":
     # NOTE this is what mlflow is going to run when called from cli
     # (this file is specified as an entrypoint in MLProject)
     with mlflow.start_run():
-        parser = ArgumentParser()
-        parser.add_argument("--experiment_name", default="mlp")
-        parser.add_argument("--lr", default=1e-3)
-        parser.add_argument("--batch_size", default=16)
-        parser.add_argument("--num_workers", default=4)
-        parser.add_argument("--num_epochs", default=5)
-        args = parser.parse_args()
 
-        mlflow.log_param("lr", args.lr)
-        mlflow.log_param("batch_size", args.batch_size)
-        mlflow.log_param("num_workers", args.num_workers)
-        mlflow.log_param("num_epochs", args.num_epochs)
+        args = {
+            "experiment_name": sys.argv[1],
+            "lr": sys.argv[2],
+            "batch_size": sys.argv[3],
+            "num_workers": sys.argv[4],
+            "num_epochs": sys.argv[5],
+        }
+
+        mlflow.log_param("lr", args["lr"])
+        mlflow.log_param("batch_size", args["batch_size"])
+        mlflow.log_param("num_workers", args["num_workers"])
+        mlflow.log_param("num_epochs", args["num_epochs"])
 
         baseline = train_baseline()
 

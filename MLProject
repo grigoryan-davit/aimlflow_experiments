@@ -5,6 +5,10 @@ python_env: config/python_env.yaml
 entry_points:
   src/automl/train:
     parameters:
-      data_file: path
-      regularization: {type: float, default: 0.1}
-    command: "python train.py -r {regularization} {data_file}"
+      experiment_name: {type: string, default: "mlp"}
+      lr: {type: float, default: 1e-3}
+      batch_size: {type: float, default: 16}
+      num_workers: {type: float, default: 4}
+      num_epochs: {type: float, default: 5}
+
+    command: "python3 -m train -r {experiment_name} {lr} {batch_size} {num_workers} {num_epochs}"
