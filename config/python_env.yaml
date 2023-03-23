@@ -1,0 +1,15 @@
+# Python version required to run the project.
+python: "3.8.0"
+# Dependencies required to build packages. This field is optional.
+build_dependencies:
+  - pip
+  - setuptools
+  - wheel
+# Dependencies required to run the project.
+dependencies:
+  - aim==3.16.2
+  - aim-mlflow==0.2.0
+  - mlflow==2.2.2
+  - pandas==1.5.3
+  - lightning==2.0.0
+  - scikit-learn==1.2.2

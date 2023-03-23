@@ -1,0 +1,10 @@
+name: Aimlflow Experiments
+
+python_env: config/python_env.yaml
+
+entry_points:
+  src/automl/train:
+    parameters:
+      data_file: path
+      regularization: {type: float, default: 0.1}
+    command: "python train.py -r {regularization} {data_file}"
