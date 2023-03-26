@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/d5d389faa3cf493191d5b9665b74209b/artifacts
+end_time: 1679767502860
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d5d389faa3cf493191d5b9665b74209b
+run_name: learned-hog-390
+run_uuid: d5d389faa3cf493191d5b9665b74209b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679767442292
+status: 4
+tags: []
+user_id: davitgrigoryan

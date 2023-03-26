@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/2369d1354a084f618a0efeadecbc8763/artifacts
+end_time: 1679571673054
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2369d1354a084f618a0efeadecbc8763
+run_name: omniscient-squid-409
+run_uuid: 2369d1354a084f618a0efeadecbc8763
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679571645976
+status: 4
+tags: []
+user_id: davitgrigoryan

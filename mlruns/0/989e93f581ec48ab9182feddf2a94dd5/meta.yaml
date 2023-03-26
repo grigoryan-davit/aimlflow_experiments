@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/989e93f581ec48ab9182feddf2a94dd5/artifacts
+end_time: 1679573521924
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 989e93f581ec48ab9182feddf2a94dd5
+run_name: puzzled-lynx-147
+run_uuid: 989e93f581ec48ab9182feddf2a94dd5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679573496705
+status: 4
+tags: []
+user_id: davitgrigoryan

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/711c5acb103945cbafbe6eda4cbd4ab9/artifacts
+end_time: 1679773416740
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 711c5acb103945cbafbe6eda4cbd4ab9
+run_name: grandiose-boar-743
+run_uuid: 711c5acb103945cbafbe6eda4cbd4ab9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679773304426
+status: 3
+tags: []
+user_id: davitgrigoryan

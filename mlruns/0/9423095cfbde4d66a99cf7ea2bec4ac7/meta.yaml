@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/9423095cfbde4d66a99cf7ea2bec4ac7/artifacts
+end_time: 1679573599791
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9423095cfbde4d66a99cf7ea2bec4ac7
+run_name: treasured-hare-186
+run_uuid: 9423095cfbde4d66a99cf7ea2bec4ac7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679573577216
+status: 4
+tags: []
+user_id: davitgrigoryan

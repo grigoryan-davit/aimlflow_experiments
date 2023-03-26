@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/798256753011660989/33aeda58005e44edb74acbaf34048c20/artifacts
+end_time: 1679573511906
+entry_point_name: ''
+experiment_id: '798256753011660989'
+lifecycle_stage: active
+run_id: 33aeda58005e44edb74acbaf34048c20
+run_name: classy-crane-364
+run_uuid: 33aeda58005e44edb74acbaf34048c20
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679573497092
+status: 4
+tags: []
+user_id: davitgrigoryan

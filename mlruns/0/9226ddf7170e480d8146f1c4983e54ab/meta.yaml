@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/9226ddf7170e480d8146f1c4983e54ab/artifacts
+end_time: 1679571870057
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9226ddf7170e480d8146f1c4983e54ab
+run_name: merciful-ox-545
+run_uuid: 9226ddf7170e480d8146f1c4983e54ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679571866566
+status: 4
+tags: []
+user_id: davitgrigoryan

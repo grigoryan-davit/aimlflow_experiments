@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/920773228454259988/31d06310a4644c0fb38bf54be22aa269/artifacts
+end_time: 1679773815147
+entry_point_name: ''
+experiment_id: '920773228454259988'
+lifecycle_stage: active
+run_id: 31d06310a4644c0fb38bf54be22aa269
+run_name: illustrious-foal-424
+run_uuid: 31d06310a4644c0fb38bf54be22aa269
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679773707812
+status: 3
+tags: []
+user_id: davitgrigoryan

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/1fd334e0cde144d2928588fe711f4bcf/artifacts
+end_time: 1679770125985
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1fd334e0cde144d2928588fe711f4bcf
+run_name: amazing-newt-525
+run_uuid: 1fd334e0cde144d2928588fe711f4bcf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679770103430
+status: 4
+tags: []
+user_id: davitgrigoryan

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/798256753011660989/401bf1e224b14fa295379ab75d6719d2/artifacts
+end_time: 1679573176255
+entry_point_name: ''
+experiment_id: '798256753011660989'
+lifecycle_stage: active
+run_id: 401bf1e224b14fa295379ab75d6719d2
+run_name: enthused-dog-326
+run_uuid: 401bf1e224b14fa295379ab75d6719d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679573159896
+status: 4
+tags: []
+user_id: davitgrigoryan

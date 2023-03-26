@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/456c9e5df56146aead04a3b85df1856e/artifacts
+end_time: 1679768891489
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 456c9e5df56146aead04a3b85df1856e
+run_name: capable-snail-710
+run_uuid: 456c9e5df56146aead04a3b85df1856e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679768826655
+status: 4
+tags: []
+user_id: davitgrigoryan

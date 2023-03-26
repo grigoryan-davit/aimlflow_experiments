@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/bd63d6bb8fc3480f8e7fd3617630e732/artifacts
+end_time: 1679769972787
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bd63d6bb8fc3480f8e7fd3617630e732
+run_name: serious-vole-194
+run_uuid: bd63d6bb8fc3480f8e7fd3617630e732
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679769950116
+status: 4
+tags: []
+user_id: davitgrigoryan

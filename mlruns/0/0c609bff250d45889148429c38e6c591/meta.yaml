@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/0c609bff250d45889148429c38e6c591/artifacts
+end_time: 1679767722076
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0c609bff250d45889148429c38e6c591
+run_name: amusing-flea-656
+run_uuid: 0c609bff250d45889148429c38e6c591
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679767647396
+status: 4
+tags: []
+user_id: davitgrigoryan

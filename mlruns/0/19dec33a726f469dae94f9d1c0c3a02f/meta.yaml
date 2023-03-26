@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/19dec33a726f469dae94f9d1c0c3a02f/artifacts
+end_time: 1679573481803
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 19dec33a726f469dae94f9d1c0c3a02f
+run_name: lyrical-grouse-539
+run_uuid: 19dec33a726f469dae94f9d1c0c3a02f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679573476678
+status: 4
+tags: []
+user_id: davitgrigoryan

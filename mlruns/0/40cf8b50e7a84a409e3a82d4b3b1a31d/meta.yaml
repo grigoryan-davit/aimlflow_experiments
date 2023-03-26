@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/40cf8b50e7a84a409e3a82d4b3b1a31d/artifacts
+end_time: 1679768319447
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40cf8b50e7a84a409e3a82d4b3b1a31d
+run_name: enthused-donkey-952
+run_uuid: 40cf8b50e7a84a409e3a82d4b3b1a31d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679768260617
+status: 4
+tags: []
+user_id: davitgrigoryan

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/3c0c8239e3d0460faacf98eb453dee40/artifacts
+end_time: 1679572522522
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3c0c8239e3d0460faacf98eb453dee40
+run_name: unequaled-ox-507
+run_uuid: 3c0c8239e3d0460faacf98eb453dee40
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679572502025
+status: 4
+tags: []
+user_id: davitgrigoryan

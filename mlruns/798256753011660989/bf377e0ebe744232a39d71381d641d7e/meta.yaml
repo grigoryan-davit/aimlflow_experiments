@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/798256753011660989/bf377e0ebe744232a39d71381d641d7e/artifacts
+end_time: 1679571059217
+entry_point_name: ''
+experiment_id: '798256753011660989'
+lifecycle_stage: active
+run_id: bf377e0ebe744232a39d71381d641d7e
+run_name: sassy-cat-516
+run_uuid: bf377e0ebe744232a39d71381d641d7e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679571041315
+status: 4
+tags: []
+user_id: davitgrigoryan

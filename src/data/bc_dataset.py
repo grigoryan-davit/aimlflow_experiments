@@ -18,7 +18,7 @@ class BCDataset(Dataset):
     def __getitem__(self, idx: int):
         row = self.data.iloc[idx]
         label = row[self.target]
-        features = torch.FloatTensor(row.drop(columns=self.target).to_list())
+        features = torch.FloatTensor(row.drop(self.target).to_list())
 
         return features, label
 
@@ -41,7 +41,7 @@ class BCDataModule(pl.LightningDataModule):
         self.batch_size = batch_size
         self.num_workers = num_workers
 
-    def setup(self) -> None:
+    def setup(self, stage=None) -> None:
         self.train_dataset = BCDataset(self.train_df, "target")
         self.val_dataset = BCDataset(self.val_df, "target")
 

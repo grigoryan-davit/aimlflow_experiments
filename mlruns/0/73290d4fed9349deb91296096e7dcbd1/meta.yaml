@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/73290d4fed9349deb91296096e7dcbd1/artifacts
+end_time: 1679768010922
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 73290d4fed9349deb91296096e7dcbd1
+run_name: nimble-steed-827
+run_uuid: 73290d4fed9349deb91296096e7dcbd1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679767944723
+status: 4
+tags: []
+user_id: davitgrigoryan

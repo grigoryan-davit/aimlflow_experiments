@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/533e7fefe87b4c1080bd015c048cfbcb/artifacts
+end_time: 1679766998441
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 533e7fefe87b4c1080bd015c048cfbcb
+run_name: nervous-doe-677
+run_uuid: 533e7fefe87b4c1080bd015c048cfbcb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679766929077
+status: 4
+tags: []
+user_id: davitgrigoryan

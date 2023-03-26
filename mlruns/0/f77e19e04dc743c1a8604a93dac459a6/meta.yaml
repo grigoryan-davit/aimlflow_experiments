@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/f77e19e04dc743c1a8604a93dac459a6/artifacts
+end_time: 1679571835374
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f77e19e04dc743c1a8604a93dac459a6
+run_name: wistful-fawn-285
+run_uuid: f77e19e04dc743c1a8604a93dac459a6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679571833347
+status: 4
+tags: []
+user_id: davitgrigoryan

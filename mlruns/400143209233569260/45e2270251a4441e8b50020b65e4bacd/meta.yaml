@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/400143209233569260/45e2270251a4441e8b50020b65e4bacd/artifacts
+end_time: 1679773416699
+entry_point_name: ''
+experiment_id: '400143209233569260'
+lifecycle_stage: active
+run_id: 45e2270251a4441e8b50020b65e4bacd
+run_name: enthused-hound-818
+run_uuid: 45e2270251a4441e8b50020b65e4bacd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679773304789
+status: 3
+tags: []
+user_id: davitgrigoryan

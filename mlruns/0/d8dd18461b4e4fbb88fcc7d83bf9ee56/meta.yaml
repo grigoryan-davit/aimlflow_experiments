@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/d8dd18461b4e4fbb88fcc7d83bf9ee56/artifacts
+end_time: 1679773815195
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d8dd18461b4e4fbb88fcc7d83bf9ee56
+run_name: burly-finch-99
+run_uuid: d8dd18461b4e4fbb88fcc7d83bf9ee56
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679773707424
+status: 3
+tags: []
+user_id: davitgrigoryan

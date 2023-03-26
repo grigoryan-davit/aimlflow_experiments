@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/0aa734043e0d470fab858c67939fe86d/artifacts
+end_time: 1679768184146
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0aa734043e0d470fab858c67939fe86d
+run_name: rumbling-owl-992
+run_uuid: 0aa734043e0d470fab858c67939fe86d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679768120402
+status: 4
+tags: []
+user_id: davitgrigoryan

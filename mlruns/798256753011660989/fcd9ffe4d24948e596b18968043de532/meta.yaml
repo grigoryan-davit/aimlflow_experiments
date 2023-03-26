@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/798256753011660989/fcd9ffe4d24948e596b18968043de532/artifacts
+end_time: 1679768891469
+entry_point_name: ''
+experiment_id: '798256753011660989'
+lifecycle_stage: active
+run_id: fcd9ffe4d24948e596b18968043de532
+run_name: casual-shrike-646
+run_uuid: fcd9ffe4d24948e596b18968043de532
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679768827069
+status: 3
+tags: []
+user_id: davitgrigoryan

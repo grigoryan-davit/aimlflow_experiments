@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/798256753011660989/01a042143e1e48e6acf68cafcaa69bdf/artifacts
+end_time: 1679571748345
+entry_point_name: ''
+experiment_id: '798256753011660989'
+lifecycle_stage: active
+run_id: 01a042143e1e48e6acf68cafcaa69bdf
+run_name: rumbling-skink-463
+run_uuid: 01a042143e1e48e6acf68cafcaa69bdf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679571731210
+status: 4
+tags: []
+user_id: davitgrigoryan

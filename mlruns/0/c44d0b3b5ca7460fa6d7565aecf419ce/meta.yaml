@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/c44d0b3b5ca7460fa6d7565aecf419ce/artifacts
+end_time: 1679773143276
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c44d0b3b5ca7460fa6d7565aecf419ce
+run_name: bedecked-bass-114
+run_uuid: c44d0b3b5ca7460fa6d7565aecf419ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679773035125
+status: 3
+tags: []
+user_id: davitgrigoryan

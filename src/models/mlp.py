@@ -23,7 +23,6 @@ class MLP(pl.LightningModule):
         assert not all(
             (num_classes is None, task == "classification")
         ), "If the task is classification, num_classes should be provided"
-
         self.task = task
         self.lr = lr
 
@@ -35,9 +34,12 @@ class MLP(pl.LightningModule):
             input_size = hidden_state
 
         if task == "classification":
-            layers.append(nn.Linear(input_size, num_classes))
-            layers.append(nn.Softmax(dim=1))
-            self.loss = nn.CrossEntropyLoss()
+            layers.append(
+                nn.Linear(input_size, num_classes)
+                if num_classes != 2
+                else nn.Linear(input_size, 1)
+            )
+            self.loss = nn.CrossEntropyLoss() if num_classes != 2 else nn.BCEWithLogitsLoss()
 
         else:
             layers.append(nn.Linear(input_size, 1))
@@ -45,7 +47,9 @@ class MLP(pl.LightningModule):
 
         self.model = nn.Sequential(*layers)
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self, x: torch.Tensor, y: Optional[torch.Tensor] = None
+    ) -> torch.Tensor:
         return self.model(x)
 
     def training_step(
@@ -54,8 +58,12 @@ class MLP(pl.LightningModule):
         batch_idx: int,
     ):
         x, y = batch
+        # y = torch.LongTensor(y)
         y_pred = self(x)
-        loss = self.loss(self(x), y)
+        if y_pred.shape[1] == 1:
+            y_pred = y_pred.flatten()
+        loss = self.loss(y_pred.float(), y)
+        # loss = self.loss(y_pred.float(), y.long())
 
         self.log("train_loss", loss, prog_bar=True, logger=True)
         return {"loss": loss, "prediction": y_pred, "label": y}
@@ -66,8 +74,11 @@ class MLP(pl.LightningModule):
         batch_idx: int,
     ):
         x, y = batch
-        y_pred = self(x, y)
-        loss = self.loss(y_pred, y)
+        y_pred = self(x)
+        if y_pred.shape[1] == 1:
+            y_pred = y_pred.flatten()
+        loss = self.loss(y_pred.float(), y)
+        # loss = self.loss(y_pred.float(), y.long())
 
         self.log("val_loss", loss, prog_bar=True, logger=True)
         return loss

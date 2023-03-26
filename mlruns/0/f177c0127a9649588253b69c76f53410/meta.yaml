@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/f177c0127a9649588253b69c76f53410/artifacts
+end_time: 1679570537180
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f177c0127a9649588253b69c76f53410
+run_name: efficient-squid-959
+run_uuid: f177c0127a9649588253b69c76f53410
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679570537160
+status: 4
+tags: []
+user_id: davitgrigoryan

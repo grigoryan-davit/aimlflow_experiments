@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/798256753011660989/ae0dd6767bc24a44aa69b36db3442cbd/artifacts
+end_time: 1679769810410
+entry_point_name: ''
+experiment_id: '798256753011660989'
+lifecycle_stage: active
+run_id: ae0dd6767bc24a44aa69b36db3442cbd
+run_name: shivering-dog-300
+run_uuid: ae0dd6767bc24a44aa69b36db3442cbd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679769805609
+status: 4
+tags: []
+user_id: davitgrigoryan

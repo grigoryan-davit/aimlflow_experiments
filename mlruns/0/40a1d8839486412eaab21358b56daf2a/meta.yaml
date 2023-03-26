@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/0/40a1d8839486412eaab21358b56daf2a/artifacts
+end_time: 1679571064235
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40a1d8839486412eaab21358b56daf2a
+run_name: placid-shark-208
+run_uuid: 40a1d8839486412eaab21358b56daf2a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679571040917
+status: 4
+tags: []
+user_id: davitgrigoryan

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/400143209233569260/ee0d8ecdf46847f4867172c9ee7ce407/artifacts
+end_time: 1679773143232
+entry_point_name: ''
+experiment_id: '400143209233569260'
+lifecycle_stage: active
+run_id: ee0d8ecdf46847f4867172c9ee7ce407
+run_name: intrigued-boar-141
+run_uuid: ee0d8ecdf46847f4867172c9ee7ce407
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679773035495
+status: 3
+tags: []
+user_id: davitgrigoryan

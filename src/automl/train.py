@@ -7,64 +7,15 @@ from lightning.pytorch.loggers import MLFlowLogger
 import mlflow
 import mlflow.sklearn
 import pandas as pd
-from sklearn.metrics import mean_squared_error, mean_absolute_error
-from sklearn.linear_model import SGDClassifier
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
 import torch
 
 from src.data.bc_dataset import BCDataModule
 from src.models.mlp import MLP
-
-
-def train_baseline_regression(data_module: BCDataModule) -> SGDClassifier:
-    baseline = make_pipeline(StandardScaler(), SGDClassifier(max_iter=1000, tol=1e-3))
-    baseline.fit(
-        data_module.train_df.drop(columns="target"), data_module.train_df["target"]
-    )
-    return baseline
-
-def train_baseline_classification(data_module: BCDataModule) -> SGDClassifier:
-    baseline = make_pipeline(StandardScaler(), SGDClassifier(max_iter=1000, tol=1e-3))
-    baseline.fit(
-        data_module.train_df.drop(columns="target"), data_module.train_df["target"]
-    )
-    return baseline
-
-
-def compute_test_metrics_regression(y_true, y_pred):
-    return {
-        "mse": mean_squared_error(y_true, y_pred),
-        "mae": mean_absolute_error(y_true, y_pred),
-    }
-
-def compute_test_metrics_classification(y_true, y_pred):
-    return {
-        "mse": mean_squared_error(y_true, y_pred),
-        "mae": mean_absolute_error(y_true, y_pred),
-    }
-
-
-def compare_to_baseline(
-    data_module: BCDataModule, baseline_model: SGDClassifier, model: pl.LightningModule
-) -> Tuple[Dict[str, Any], Dict[str, Any]]:
-    test_df = data_module.test_df
-
-    baseline_preds = baseline_model.predict(test_df.drop("target"))
-    with torch.no_grad():
-        model.eval()
-        model_preds = model(torch.FloatTensor(test_df.drop(columns="target").to_list()))
-
-    if model.task == "regression":
-        return (
-            compute_test_metrics_regression(model_preds, test_df["target"]),
-            compute_test_metrics_regression(baseline_preds, test_df["target"]),
-        )
-    else:
-        return (
-            compute_test_metrics_classification(model_preds, test_df["target"]),
-            compute_test_metrics_classification(baseline_preds, test_df["target"]),
-        )
+from src.automl.utils import (
+    train_baseline_regression,
+    train_baseline_classification,
+    compare_to_baseline
+)
 
 
 def train_pl(
@@ -86,11 +37,11 @@ if __name__ == "__main__":
     with mlflow.start_run():
 
         args = {
-            "experiment_name": sys.argv[1],
-            "lr": sys.argv[2],
-            "batch_size": sys.argv[3],
-            "num_workers": sys.argv[4],
-            "num_epochs": sys.argv[5],
+            "experiment_name": sys.argv[1] if len(sys.argv) > 1 else "mlp",
+            "lr": sys.argv[2] if len(sys.argv) > 2 else 1e-3,
+            "batch_size": sys.argv[3] if len(sys.argv) > 3 else 16,
+            "num_workers": sys.argv[4] if len(sys.argv) > 4 else 2,
+            "num_epochs": sys.argv[5] if len(sys.argv) > 5 else 3,
         }
 
         mlflow.log_param("lr", args["lr"])
@@ -98,17 +49,20 @@ if __name__ == "__main__":
         mlflow.log_param("num_workers", args["num_workers"])
         mlflow.log_param("num_epochs", args["num_epochs"])
 
-        baseline = train_baseline()
+        data = BCDataModule(batch_size=args["batch_size"], num_workers=args["num_workers"])
+        baseline = train_baseline_classification(data)
 
-        data = BCDataModule(batch_size=args.batch_size, num_workers=args.num_workers)
         model = train_pl(
-            experiment_name=args.experiment_name,
-            model=MLP(input_size=data.input_size, lr=args.lr),
+            experiment_name=args["experiment_name"],
+            model=MLP(input_size=data.input_size, lr=args["lr"], num_classes=len(data.train_df["target"].unique())),
             data_module=data,
-            num_epochs=args.num_epochs,
+            num_epochs=args["num_epochs"],
         )
+        
+        test_metrics, baseline_metrics = compare_to_baseline(data, baseline, model)
 
-        test_metrics, baseline_metrics = compare_to_baseline()
+        print(test_metrics)
+        print(baseline_metrics)
         for metric in test_metrics.keys():
-            mlflow.log_param(metric + "_baseline", baseline_metrics[metric])
-            mlflow.log_param(metric + "_test", test_metrics[metric])
+            mlflow.log_metric(metric + "_baseline", baseline_metrics[metric])
+            mlflow.log_metric(metric + "_test", test_metrics[metric])

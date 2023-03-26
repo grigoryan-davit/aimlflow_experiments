@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/davitgrigoryan/Documents/projects/aim_/aimlflow_test/aimlflow_test/mlruns/798256753011660989/0ae2733d44c844c2a840b7b80b323793/artifacts
+end_time: 1679772962859
+entry_point_name: ''
+experiment_id: '798256753011660989'
+lifecycle_stage: active
+run_id: 0ae2733d44c844c2a840b7b80b323793
+run_name: defiant-fox-399
+run_uuid: 0ae2733d44c844c2a840b7b80b323793
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679772858247
+status: 3
+tags: []
+user_id: davitgrigoryan
