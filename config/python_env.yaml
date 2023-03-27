@@ -1,5 +1,5 @@
 # Python version required to run the project.
-python: "3.9.16"
+# python: "3.9.16"
 # Dependencies required to build packages. This field is optional.
 build_dependencies:
   - pip
@@ -12,4 +12,5 @@ dependencies:
   - mlflow==2.2.2
   - pandas==1.5.3
   - lightning==2.0.0
+  - pytorch-lightning
   - scikit-learn==1.2.2
